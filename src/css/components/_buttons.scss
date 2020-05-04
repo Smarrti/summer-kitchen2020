@@ -28,10 +28,28 @@ button {
     width: 420px;
 
     &_vk {
-
+        background-color: $color-vk-button;
+        &:hover,
+        &:active {
+            background: 
+                linear-gradient(0deg, rgba(40, 40, 40, 0.1), rgba(40, 40, 40, 0.1)), 
+                $color-vk-button;
+        }
+        &:focus {
+            background-color: $color-vk-button;
+        }
     }
 
     &_fb {
-
+        background-color: $color-fb-button;
+        &:hover,
+        &:active {
+            background: 
+                linear-gradient(0deg, rgba(40, 40, 40, 0.1), rgba(40, 40, 40, 0.1)), 
+                $color-fb-button;
+        }
+        &:focus {
+            background-color: $color-fb-button;
+        }
     }
 }
