@@ -8,7 +8,7 @@
 .form__input {
     width: 403px;
     height: 46px;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     padding-top: 7px;
     padding-left: 16px;
     font-size: 1.6rem;
@@ -22,9 +22,15 @@
     &:hover {
         background: rgba(237, 238, 240, 0.1);
     }
-    &:active {
+    &:focus,
+    &:valid {
         border: none;
+        border: 1px solid $color-background;
         border-bottom: 1px solid $color-gray;
+        & + .form__head {
+            font-size: 1.4rem;
+            transform: translateY(-74px) translateX(16px);
+        }
     }
 }
 
@@ -57,4 +63,12 @@
 
 .form__line {
     border: 1px solid $color-gray;
+}
+
+.form__head {
+    font-size: 1.6rem;
+    color: $color-light-text;
+    cursor: text;
+    transform: translateY(-50px) translateX(16px);
+    transition: all 0.3s;
 }

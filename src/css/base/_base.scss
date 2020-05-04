@@ -33,3 +33,7 @@ button {
     font-weight: 500;
     line-height: 21px;
 }
+
+:focus {
+    outline: none;
+}
