@@ -1,0 +1,37 @@
+button {
+    height: 48px;
+    color: $color-button-text;
+}
+
+.form__button {
+    background-color: $color-primary;
+
+    &_auth {
+        width: 198px;
+    }
+
+    &_registration {
+        width: 223px;
+    }
+    &:hover {
+        background-color: $color-hover;
+    }
+    &:active {
+        background-color: $color-hover;
+    }
+    &:focus {
+        background-color: $color-primary;
+    }
+}
+
+.social__button {
+    width: 420px;
+
+    &_vk {
+
+    }
+
+    &_fb {
+
+    }
+}
