@@ -1,0 +1,18 @@
+input[type=text] {
+    width: 420px;
+    height: 56px;
+    color: $color-text;
+    border: 1px solid $color-gray;
+    border-radius: 2px;
+    background: $color-background;
+    &::placeholder {
+        color: $color-light-text;
+    }
+    &:hover {
+        background: rgba(237, 238, 240, 0.1);
+    }
+    &:active {
+        border: none;
+        border-bottom: 1px solid $color-gray;
+    }
+}
