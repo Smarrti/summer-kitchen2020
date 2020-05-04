@@ -39,22 +39,24 @@
     margin-bottom: 36px;
 }
 
-.form__checkbox_wrapper::before {
-    content: '';
-    display: block;
+.form__box {
     width: 40px;
     height: 18px;
     margin-top: 11px;
     margin-right: 13px;
-    border: 1px solid $color-primary;
+    border: 1px solid $color-gray;
     border-radius:2px;
     cursor: pointer;
+    &:hover {
+        border: 1px solid $color-primary;
+    }
 }
 
-.checkbox:checked + .form__checkbox_wrapper::before {
+.checkbox:checked + .form__checkbox_wrapper > .form__box {
     background: url("../assets/checked.png");
     background-repeat: no-repeat;
     background-position: center;
+    border: 1px solid $color-primary;
 }
 
 .checkbox {
