@@ -1,9 +1,11 @@
-form {
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-top: 46px;
 }
 
-input[type=text],
-input[type=password] {
+.form__input {
     width: 403px;
     height: 46px;
     margin-bottom: 32px;
@@ -24,4 +26,35 @@ input[type=password] {
         border: none;
         border-bottom: 1px solid $color-gray;
     }
+}
+
+.form__checkbox_wrapper {
+    display: flex;
+    margin-bottom: 36px;
+}
+
+.form__checkbox_wrapper::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 18px;
+    margin-top: 11px;
+    margin-right: 13px;
+    border: 1px solid $color-primary;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+.checkbox:checked + .form__checkbox_wrapper::before {
+    background: url("../assets/checked.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox {
+    display: none;
+}
+
+.form__line {
+    border: 1px solid $color-gray;
 }

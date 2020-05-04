@@ -1,14 +1,18 @@
-button {
+button,
+input[type=submit] {
     height: 48px;
     color: $color-button-text;
     border-radius: 2px;
+    border: none
 }
 
 .form__button {
     background-color: $color-primary;
 
     &_auth {
-        width: 198px;
+        width: 223px;
+        margin-top: 29px;
+        font-size: 1.4rem;
     }
 
     &_registration {
