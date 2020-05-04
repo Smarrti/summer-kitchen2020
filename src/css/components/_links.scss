@@ -1,4 +1,9 @@
 a {
     color: $color-primary;
     text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-hover;
+    }
 }
