@@ -1,6 +1,15 @@
-input[type=text] {
-    width: 420px;
-    height: 56px;
+form {
+    margin-top: 46px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 403px;
+    height: 46px;
+    margin-bottom: 32px;
+    padding-top: 7px;
+    padding-left: 16px;
+    font-size: 1.6rem;
     color: $color-text;
     border: 1px solid $color-gray;
     border-radius: 2px;
