@@ -36,6 +36,7 @@ function generateRegistrationCard() {
     formBoxWrapper.classList.add('form__box');
     formLine.classList.add('form__line');
     formSubmit.classList.add('form__button', 'form__button_registration');
+    registrationMessageUrl.classList.add('registration__message');
 
     registrationMessageUrl.setAttribute('href', '#');
     form.setAttribute('action', '#');
@@ -106,6 +107,7 @@ function generateAuthCard() {
     socialVk.classList.add('social__button', 'social__button_vk');
     socialFb.classList.add('social__button', 'social__button_fb');
     layout2Column.classList.add('layout__2-column');
+    authMessageUrl.classList.add('auth__message');
 
     authMessageUrl.setAttribute('href', '#');
     form.setAttribute('action', '#');
@@ -137,6 +139,28 @@ function generateAuthCard() {
     authWrapper.append(authHead, authMessage, form);
     card.append(authWrapper);
 }
-generateAuthCard()
 
-// generateRegistrationCard();
+function deleteContent() {
+    const card = document.querySelector('.main__card');
+    card.innerHTML = '';
+}
+
+generateAuthCard();
+
+document.addEventListener('click', (event) => {
+    const { target } = event;
+    const { classList } = target;
+    
+    switch (true) {
+        case classList.contains('auth__message'):
+            deleteContent();
+            generateRegistrationCard();
+            break;
+        case classList.contains('registration__message'):
+            deleteContent();
+            generateAuthCard();
+            break;
+        default:
+            break;
+    }
+})
