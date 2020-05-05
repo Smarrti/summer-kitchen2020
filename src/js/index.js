@@ -35,7 +35,7 @@ function generateRegistrationCard() {
     formBox.classList.add('form__checkbox_wrapper');
     formBoxWrapper.classList.add('form__box');
     formLine.classList.add('form__line');
-    formSubmit.classList.add('form__button', 'form__button_auth');
+    formSubmit.classList.add('form__button', 'form__button_registration');
 
     registrationMessageUrl.setAttribute('href', '#');
     form.setAttribute('action', '#');
@@ -71,4 +71,4 @@ function generateRegistrationCard() {
     card.append(registrationWrapper);
 }
 
-generateRegistrationCard();
+// generateRegistrationCard();

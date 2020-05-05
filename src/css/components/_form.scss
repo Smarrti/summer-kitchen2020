@@ -36,7 +36,7 @@
 
 .form__checkbox_wrapper {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
 }
 
 .form__box {
@@ -64,6 +64,7 @@
 }
 
 .form__line {
+    width: 100%;
     border: 1px solid $color-gray;
 }
 
