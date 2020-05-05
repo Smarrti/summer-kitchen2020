@@ -71,4 +71,72 @@ function generateRegistrationCard() {
     card.append(registrationWrapper);
 }
 
+function generateAuthCard() {
+    const card = document.querySelector('.main__card');
+    const authWrapper = document.createElement('div');
+    const authHead = document.createElement('h2');
+    const authMessage = document.createElement('p');
+    const authMessageUrl = document.createElement('a');
+    const form = document.createElement('form');
+    const formEmail = document.createElement('label');
+    const formEmailInput = document.createElement('input');
+    const formEmailText = document.createElement('div');
+    const formPass = document.createElement('label');
+    const formPassInput = document.createElement('input');
+    const formPassText = document.createElement('div');
+    const layout2Column = document.createElement('div');
+    const forgetPassword = document.createElement('a');
+    const formAuth = document.createElement('input');
+    const formLine = document.createElement('hr');
+    const social = document.createElement('social');
+    const socialText = document.createElement('p');
+    const socialVk = document.createElement('button');
+    const socialFb = document.createElement('button');
+
+    authWrapper.classList.add('auth__wrapper');
+    form.classList.add('form');
+    formEmailInput.classList.add('form__input')
+    formEmailText.classList.add('form__head');
+    formPassInput.classList.add('form__input');
+    formPassText.classList.add('form__head');
+    formLine.classList.add('form__line');
+    formAuth.classList.add('form__button', 'form__button_auth');
+    social.classList.add('layout__social');
+    socialText.classList.add('social__text');
+    socialVk.classList.add('social__button', 'social__button_vk');
+    socialFb.classList.add('social__button', 'social__button_fb');
+    layout2Column.classList.add('layout__2-column');
+
+    authMessageUrl.setAttribute('href', '#');
+    form.setAttribute('action', '#');
+    form.setAttribute('method', 'POST');
+    formEmailInput.setAttribute('type', 'text');
+    formEmailInput.setAttribute('required', 'true');
+    formPassInput.setAttribute('type', 'password');
+    formPassInput.setAttribute('required', 'true');
+    forgetPassword.setAttribute('href', '#');
+    formAuth.setAttribute('type', 'submit');
+    formAuth.setAttribute('value', 'Войти');
+
+    authHead.textContent = 'Войти в учетную запись';
+    authMessage.textContent = 'Нет учетной записи? ';
+    authMessageUrl.textContent = 'Создать учетную запись';
+    formEmailText.textContent = 'E-mail*'
+    formPassText.textContent = 'Пароль*';
+    forgetPassword.textContent = 'Забыли пароль?';
+    socialText.textContent = 'или с помощью';
+    socialVk.textContent = 'Войти через ВКонтакте';
+    socialFb.textContent = 'Войти через Facebook';
+
+    formEmail.append(formEmailInput, formEmailText);
+    formPass.append(formPassInput, formPassText);
+    authMessage.append(authMessageUrl);
+    layout2Column.append(forgetPassword, formAuth); 
+    social.append(socialText, socialVk, socialFb);
+    form.append(formEmail, formPass, layout2Column, formLine, social);
+    authWrapper.append(authHead, authMessage, form);
+    card.append(authWrapper);
+}
+generateAuthCard()
+
 // generateRegistrationCard();
